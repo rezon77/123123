@@ -1,0 +1,16 @@
+import platform
+import sys
+
+def main():
+    os_name = platform.system()
+    python_version = sys.version
+    
+    info_string = f"OS info is {os_name} Python version is {python_version}\n"
+    
+    with open('os_info.txt', 'w', encoding='utf-8') as file:
+        file.write(info_string)
+        
+    print("Файл os_info.txt успешно создан!")
+
+if __name__ == '__main__':
+    main()
